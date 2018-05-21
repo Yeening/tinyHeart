@@ -46,4 +46,5 @@ function gameloop(){
     lastTime = now;
 
     drawBackground();
+    ane.draw();
 }
