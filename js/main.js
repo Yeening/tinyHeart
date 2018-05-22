@@ -18,6 +18,9 @@ var fruit;
 var bgPic = new Image();
 var mom;
 
+var mx;
+var my;
+
 document.body.onload = game;
 function game(){
     init();
@@ -32,6 +35,8 @@ function init() {
     can2=document.getElementById("canvas2");  //background, ane, fruits
     ctx2=can2.getContext("2d");
 
+    can1.addEventListener("mousemove", onMouseMove, false);
+
     bgPic.src = "./src/background.jpg";
 
     canWidth = can1.width;
@@ -45,6 +50,9 @@ function init() {
 
     mom = new momObj();
     mom.init();
+
+    mx = canWidth * 0.5;
+    my = canHeight * 0.5;
 }
 
 function gameloop(){
@@ -63,4 +71,11 @@ function gameloop(){
     ctx1.clearRect(0,0,canWidth,canHeight);
     mom.draw();
 
+}
+
+function onMouseMove(e) {
+    if(e.offsetX || e.layerX){
+        mx = e.offsetX == undefined ? e.layerX : e.offsetX;
+        my = e.offsetY == undefined ? e.layerY : e.offsetY;
+    }
 }
