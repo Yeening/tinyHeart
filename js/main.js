@@ -91,7 +91,7 @@ function gameloop(){
 }
 
 function onMouseMove(e) {
-    if(e.offsetX || e.layerX){
+    if((e.offsetX || e.layerX) &&!data.gameOver){
         mx = e.offsetX == undefined ? e.layerX : e.offsetX;
         my = e.offsetY == undefined ? e.layerY : e.offsetY;
     }

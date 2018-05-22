@@ -21,6 +21,8 @@ var babyObj = function () {
 
 }
 
+//baby die function
+
 babyObj.prototype.init = function () {
     this.x = canWidth * 0.5 - 50;
     this.y = canHeight * 0.5 + 50;
@@ -89,6 +91,7 @@ babyObj.prototype.draw = function () {
         if(this.babyBodyCount > 19){
             this.babyBodyCount = 19;
             //gameover
+            data.gameOver = true;
         }
     }
 

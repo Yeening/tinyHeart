@@ -5,6 +5,7 @@
 //big fish eat the fruit while distance is short enough
 
 function momFruitsCollision() {
+    if(data.gameOver) return;
     for(var i = 0; i < fruit.num; i++){
         if(fruit.alive[i]){
             //get length
@@ -23,6 +24,7 @@ function momFruitsCollision() {
 
 //mom baby collision
 function momBabyCollision() {
+    if(data.gameOver) return;
     //get length
     //to solve: judge whether the fruit is mature
     var distance = calLength2(mom.x, mom.y, baby.x, baby.y);
