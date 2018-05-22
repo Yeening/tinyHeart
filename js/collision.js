@@ -29,8 +29,10 @@ function momBabyCollision() {
     if (distance < 900) {
         //feed baby fish
         baby.recover();
-        //big fish recover
+        //data recover
         data.reset();
+        //big fish recover
+        mom.bigBodyCount = 0;
 
     }
 }

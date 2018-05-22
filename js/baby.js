@@ -82,7 +82,6 @@ babyObj.prototype.draw = function () {
     }
 
     //baby body count
-    //baby tail count
     this.babyBodyTimer += deltaTime;
     if(this.babyBodyTimer >= 200){
         this.babyBodyCount = this.babyBodyCount + 1;

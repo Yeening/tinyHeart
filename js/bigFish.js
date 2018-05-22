@@ -5,12 +5,10 @@ var momObj = function () {
     this.x;
     this.y;
     this.angle;
-    //this.bigEye = new Image();
-    this.bigBody = new Image();
-    // this.bigTail = new Image();
 
     this.bigEye = [];
-    //this.bigBody = [];
+    this.bigBodyOrange = [];
+    this.bigBodyBlue = [];
     this.bigTail = [];
 
     this.bigTailTimer = 0;
@@ -27,9 +25,6 @@ momObj.prototype.init = function(){
     this.x = canWidth * 0.5;
     this.y = canHeight * 0.5;
     this.angle = 0;
-    this.bigEye.src = "./src/bigEye0.png";
-    this.bigBody.src = "./src/bigSwim0.png";
-    // this.bigTail.src = "./src/bigTail0.png";
 
     //load img sequence
     for(var i = 0; i < 8; i++){
@@ -39,6 +34,14 @@ momObj.prototype.init = function(){
     for(var i = 0; i < 2; i++){
         this.bigEye[i] = new Image();
         this.bigEye[i].src = "./src/bigEye" + i + ".png";
+    }
+    for(var i = 0; i < 8; i++){
+        this.bigBodyOrange[i] = new Image();
+        this.bigBodyOrange[i].src = "./src/bigSwim" + i + ".png";
+    }
+    for(var i = 0; i < 8; i++){
+        this.bigBodyBlue[i] = new Image();
+        this.bigBodyBlue[i].src = "./src/bigSwimBlue" + i + ".png";
     }
 }
 momObj.prototype.draw = function () {
@@ -76,12 +79,32 @@ momObj.prototype.draw = function () {
         }
     }
 
+    //big body count
+    if(data.fruitNum){
+        this.bigBodyTimer += deltaTime;
+        if(this.bigBodyTimer >= 200){
+            this.bigBodyCount = this.bigBodyCount + 1;
+            this.bigBodyTimer %= 200;
+            if(this.bigBodyCount > 7){
+                this.bigBodyCount = 7;
+
+            }
+        }
+    }
+    else{ this.bigBodyCount = 0;}
+
+
     ctx1.save();
 
     ctx1.translate(this.x,this.y);   //set base point for big fish
     ctx1.rotate(this.angle);
     ctx1.drawImage(this.bigTail[this.bigTailCount],-this.bigTail[this.bigTailCount].width * 0.5 + 30, -this.bigTail[this.bigTailCount].height * 0.5);
-    ctx1.drawImage(this.bigBody,-this.bigBody.width * 0.5, -this.bigBody.height * 0.5);
+    if(data.times==1){
+        ctx1.drawImage(this.bigBodyOrange[this.bigBodyCount],-this.bigBodyOrange[this.bigBodyCount].width * 0.5, -this.bigBodyOrange[this.bigBodyCount].height * 0.5);
+    }
+    else{
+        ctx1.drawImage(this.bigBodyBlue[this.bigBodyCount],-this.bigBodyBlue[this.bigBodyCount].width * 0.5, -this.bigBodyBlue[this.bigBodyCount].height * 0.5);
+    }
     ctx1.drawImage(this.bigEye[this.bigEyeCount],-this.bigEye[this.bigEyeCount].width * 0.5, -this.bigEye[this.bigEyeCount].height * 0.5);
 
 
