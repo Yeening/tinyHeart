@@ -9,7 +9,7 @@ aneObj.prototype.num=50;
 aneObj.prototype.init = function() {
     for(var i =0;i<this.num;i++){
         this.x[i] = i*16 + Math.random() * 20;//[0,1)
-        this.len[i] = 200 + Math.random() * 50;
+        this.len[i] = 175 + Math.random() * 50;
     }
 }
 
