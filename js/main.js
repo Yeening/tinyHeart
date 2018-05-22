@@ -3,10 +3,8 @@
  */
 var can1;
 var can2;
-
 var ctx1;
 var ctx2;
-
 var canWidth;
 var canHeight;
 
@@ -19,6 +17,9 @@ var bgPic = new Image();
 var mom;
 var baby;
 var data;
+
+var wave;
+var waveRed;
 
 var mx;
 var my;
@@ -63,6 +64,10 @@ function init() {
 
     data = new dataObj();
 
+    wave = new waveObj();
+    wave.init();
+    waveRed = new waveRedObj();
+    waveRed.init();
 
 }
 
@@ -88,6 +93,9 @@ function gameloop(){
     momBabyCollision();
 
     data.draw();
+
+    wave.draw();
+    waveRed.draw();
 }
 
 function onMouseMove(e) {

@@ -17,6 +17,7 @@ function momFruitsCollision() {
                     data.times = 2;
                 }
                 else data.fruitNum++;
+                wave.born(fruit.x[i],fruit.y[i]);
             }
         }
     }
@@ -30,13 +31,17 @@ function momBabyCollision() {
     var distance = calLength2(mom.x, mom.y, baby.x, baby.y);
     if (distance < 900) {
         //feed baby fish
-        if(data.fruitNum)
+        if(data.fruitNum){
             baby.recover();
+            waveRed.born(baby.x,baby.y);
+        }
         //add score
         data.addScore();
 
         //big fish recover
         mom.bigBodyCount = 0;
+
+
 
     }
 }

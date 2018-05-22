@@ -11,9 +11,10 @@ var dataObj = function () {
 
 
 dataObj.prototype.addScore = function () {
-    data.score += data.fruitNum * 10 * data.times;
-    data.times = 1;
-    data.fruitNum = 0;
+    var addScore = this.fruitNum * 10 * this.times;
+    this.score += addScore;
+    this.times = 1;
+    this.fruitNum = 0;
 }
 
 dataObj.prototype.draw = function () {
