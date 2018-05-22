@@ -28,9 +28,11 @@ function momBabyCollision() {
     var distance = calLength2(mom.x, mom.y, baby.x, baby.y);
     if (distance < 900) {
         //feed baby fish
-        baby.recover();
-        //data recover
-        data.reset();
+        if(data.fruitNum)
+            baby.recover();
+        //add score
+        data.addScore();
+
         //big fish recover
         mom.bigBodyCount = 0;
 
