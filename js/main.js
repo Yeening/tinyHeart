@@ -17,9 +17,12 @@ var ane;
 var fruit;
 var bgPic = new Image();
 var mom;
+var baby;
 
 var mx;
 var my;
+
+
 
 document.body.onload = game;
 function game(){
@@ -51,6 +54,9 @@ function init() {
     mom = new momObj();
     mom.init();
 
+    baby = new babyObj();
+    baby.init();
+
     mx = canWidth * 0.5;
     my = canHeight * 0.5;
 }
@@ -60,6 +66,7 @@ function gameloop(){
     var now = Date.now();
     deltaTime = now - lastTime;
     lastTime = now;
+    if(deltaTime > 40) deltaTime = 40;
 
     drawBackground();
 
@@ -71,6 +78,8 @@ function gameloop(){
     ctx1.clearRect(0,0,canWidth,canHeight);
     mom.draw();
     momFruitsCollision();
+
+    baby.draw();
 
 }
 
