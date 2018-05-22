@@ -82,6 +82,7 @@ function gameloop(){
     momFruitsCollision();
 
     baby.draw();
+    momBabyCollision()
 
 }
 

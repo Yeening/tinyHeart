@@ -5,9 +5,9 @@ var babyObj = function () {
     this.x;
     this.y;
     this.angle;
-    //this.babyEye = new Image();
     this.babyEye = [];
-    this.babyBody = new Image();
+    //this.babyBody = new Image();
+    this.babyBody = [];
     this.babyTail = [];
 
     this.babyTailTimer = 0;
@@ -16,6 +16,9 @@ var babyObj = function () {
     this.babyEyeTimer = 0;
     this.babyEyeCount = 0;
     this.babyEyeInterval = 1000;
+
+    this.babyBodyTimer = 0;
+    this.babyBodyCount = 0;
 
 }
 
@@ -34,6 +37,14 @@ babyObj.prototype.init = function () {
         this.babyEye[i] = new Image();
         this.babyEye[i].src = "./src/babyEye" + i + ".png";
     }
+    for(var i = 0; i < 20; i++){
+        this.babyBody[i] = new Image();
+        this.babyBody[i].src = "./src/babyFade" + i + ".png";
+    }
+}
+
+babyObj.prototype.recover=function () {
+    this.babyBodyCount = 0;
 }
 
 babyObj.prototype.draw = function () {
@@ -71,12 +82,24 @@ babyObj.prototype.draw = function () {
         }
     }
 
+    //baby body count
+    //baby tail count
+    this.babyBodyTimer += deltaTime;
+    if(this.babyBodyTimer >= 200){
+        this.babyBodyCount = this.babyBodyCount + 1;
+        this.babyBodyTimer %= 200;
+        if(this.babyBodyCount > 19){
+            this.babyBodyCount = 19;
+            //gameover
+        }
+    }
+
     ctx1.save();
     //translate
     ctx1.translate(this.x,this.y);
     ctx1.rotate(this.angle);
     ctx1.drawImage(this.babyTail[this.babyTailCount],0 - this.babyTail[this.babyTailCount].width * 0.5 + 23, 0 - this.babyTail[this.babyTailCount].height * 0.5);
-    ctx1.drawImage(this.babyBody,0 - this.babyBody.width * 0.5, 0 - this.babyBody.height * 0.5);
+    ctx1.drawImage(this.babyBody[this.babyBodyCount],0 - this.babyBody[this.babyBodyCount].width * 0.5, 0 - this.babyBody[this.babyBodyCount].height * 0.5);
     ctx1.drawImage(this.babyEye[this.babyEyeCount],0 - this.babyEye[this.babyEyeCount].width * 0.5, 0 - this.babyEye[this.babyEyeCount].height * 0.5);
 
     ctx1.restore();
