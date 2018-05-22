@@ -6,7 +6,6 @@ var babyObj = function () {
     this.y;
     this.angle;
     this.babyEye = [];
-    //this.babyBody = new Image();
     this.babyBody = [];
     this.babyTail = [];
 
