@@ -59,6 +59,8 @@ function init() {
 
     mx = canWidth * 0.5;
     my = canHeight * 0.5;
+
+
 }
 
 function gameloop(){
