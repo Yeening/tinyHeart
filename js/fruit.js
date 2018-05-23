@@ -3,9 +3,10 @@
  */
 var fruitObj = function () {
     this.alive = []; //bool
+    this.aneNumber = [];
     this.x = [];
     this.y = [];
-    this.l = [];
+    this.l = [];      //fruit size
     this.spd = [];    //speed of grow and float
     this.fruitType = [];
     this.orange = new Image();
@@ -15,6 +16,7 @@ fruitObj.prototype.num = 30;
 fruitObj.prototype.init = function(){
     for(var i = 0; i <this.num; i++){
         this.alive[i] = false;
+        this.aneNumber[i] = 0;
         this.x[i] = 0;
         this.y[i] = 0;
         this.fruitType[i] = "";
@@ -28,7 +30,8 @@ fruitObj.prototype.draw = function () {
         //draw
         //find an ane, grow, fly up
         if(this.alive[i]){
-            if(this.l[i] <= 14){
+            if(this.l[i] <= 14){  //grow
+                this.x[i] = ane.headX[this.aneNumber[i]];
                 this.l[i] += this.spd[i] * deltaTime;
             }
             else{
@@ -47,10 +50,10 @@ fruitObj.prototype.draw = function () {
     }
 }
 fruitObj.prototype.born = function (i) {
-    var aneID = Math.floor(Math.random() * ane.num);
+    this.aneNumber[i] = Math.floor(Math.random() * ane.num);
     this.alive[i] = true;
-    this.x[i] = ane.x[aneID];
-    this.y[i] = canHeight - ane.len[aneID];
+    this.x[i] = ane.headX[this.aneNumber[i]];
+    this.y[i] = ane.headY[this.aneNumber[i]];
     this.l[i] = 0;
     this.spd[i] = Math.random() * 0.017 +0.003; //[0.003. 0.02)
     if(Math.random() < 0.15){
