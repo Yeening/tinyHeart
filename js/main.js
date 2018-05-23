@@ -21,6 +21,8 @@ var data;
 var wave;
 var waveRed;
 
+var dust;
+
 var mx;
 var my;
 
@@ -69,6 +71,9 @@ function init() {
     waveRed = new waveRedObj();
     waveRed.init();
 
+    dust = new dustObj();
+    dust.init();
+
 }
 
 function gameloop(){
@@ -96,6 +101,8 @@ function gameloop(){
 
     wave.draw();
     waveRed.draw();
+
+    dust.draw();
 }
 
 function onMouseMove(e) {
