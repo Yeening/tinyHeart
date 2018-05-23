@@ -7,9 +7,9 @@
 function momFruitsCollision() {
     if(data.gameOver) return;
     for(var i = 0; i < fruit.num; i++){
-        if(fruit.alive[i]){
+        if(fruit.alive[i] && fruit.l[i] > 14){
             //get length
-            //to solve: judge whether the fruit is mature
+            //solved: judge whether the fruit is mature
             var distance = calLength2(fruit.x[i],fruit.y[i], mom.x, mom.y);
             if(distance < 900){
                 fruit.dead(i);

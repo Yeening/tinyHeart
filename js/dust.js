@@ -20,7 +20,7 @@ dustObj.prototype.init = function () {
     for(var i = 0; i < 30; i++){
         this.x[i] = Math.random() * canWidth;
         this.y[i] = Math.random() * canHeight;
-        this.amp[i] = 20 + Math.random() * 15;
+        this.amp[i] = 10 + Math.random() * 25;
         this.picNO[i] = Math.floor(Math.random() * 7);  //R[0,7)
     }
     this.alpha = 0;
