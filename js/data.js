@@ -6,13 +6,19 @@ var dataObj = function () {
     this.times = 1;
     this.score = 0;
     this.alpha = 0;
+    this.alpha1 = 0;
+    this.floatStart = 0;
+    this.scoreToAdd = 0;
     this.gameOver = false;
 }
 
 
 dataObj.prototype.addScore = function () {
-    var addScore = this.fruitNum * 10 * this.times;
-    this.score += addScore;
+    this.scoreToAdd = this.fruitNum * 10 * this.times;
+    if(this.fruitNum){
+        this.alpha1 = 0.1 * Math.PI;
+    }
+    this.score += this.scoreToAdd;
     this.times = 1;
     this.fruitNum = 0;
 }
@@ -27,7 +33,16 @@ dataObj.prototype.draw = function () {
     ctx1.fillStyle = "white";
     ctx1.font = "30px Verdana";
     ctx1.textAlign = "center";  //align: left,center,right
-    ctx1.fillText("Score: "+this.score, w*0.5, h - 50);
+    ctx1.fillText("Score: "+this.score, w*0.5, 50);
+    if(this.alpha1 && this.alpha1 < Math.PI){
+        this.alpha1 += deltaTime * 0.002 * Math.PI;
+        //this.alpha1 = Math.sin(this.floatStart);
+        ctx1.save();
+        ctx1.fillStyle = "rgba(255, 255, 255," + Math.sin(this.alpha1) + ")";
+        ctx1.fillText("" + this.scoreToAdd, baby.x, baby.y - 50);
+        ctx1.restore();
+    }
+    if(this.alpha1 > Math.PI){this.alpha1 = 0;}
     //game over
     if(this.gameOver){
         this.alpha += deltaTime * 0.0005;

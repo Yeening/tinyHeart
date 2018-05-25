@@ -41,8 +41,6 @@ waveRedObj.prototype.draw = function () {
             ctx1.strokeStyle = "rgba(203, 91, 0," + alpha + ")";
             ctx1.stroke();
             //draw
-            console.log("draw");
-
         }
     }
     ctx1.restore();

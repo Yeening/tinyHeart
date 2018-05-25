@@ -29,17 +29,19 @@ function momBabyCollision() {
     //get length
     //to solve: judge whether the fruit is mature
     var distance = calLength2(mom.x, mom.y, baby.x, baby.y);
-    if (distance < 900) {
+    if (distance < 900&&data.fruitNum) {
         //feed baby fish
-        if(data.fruitNum){
-            baby.recover();
-            waveRed.born(baby.x,baby.y);
-        }
-        //add score
+        baby.recover();
+        waveRed.born(baby.x,baby.y);
+        //add score.
         data.addScore();
 
         //big fish recover
         mom.bigBodyCount = 0;
+        if(data.fruitNum){
+
+        }
+
 
 
 

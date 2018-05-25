@@ -41,7 +41,6 @@ waveObj.prototype.draw = function () {
             ctx1.strokeStyle = "rgba(255, 255, 255," + alpha + ")";
             ctx1.stroke();
             //draw
-            console.log("draw");
 
         }
     }
