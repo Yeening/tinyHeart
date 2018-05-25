@@ -11,6 +11,10 @@ var fruitObj = function () {
     this.fruitType = [];
     this.orange = new Image();
     this.blue = new Image();
+    this.magnet = new Image();
+
+    this.typeNum = 6;
+    this.timeCounter = [];  //magnet, freeze, party, diamond
 }
 fruitObj.prototype.num = 30;
 fruitObj.prototype.init = function(){
@@ -24,6 +28,7 @@ fruitObj.prototype.init = function(){
     }
     this.orange.src = "./src/fruit.png";
     this.blue.src = "./src/blue.png";
+    this.magnet.src="./src/magnet.png";
 }
 fruitObj.prototype.draw = function () {
     for(var i = 0; i < this.num;i++){
@@ -43,8 +48,11 @@ fruitObj.prototype.draw = function () {
             if(this.fruitType[i] == "orange"){
                 ctx2.drawImage(this.orange, this.x[i] - this.l[i] * 0.5,this.y[i] - this.l[i] * 0.5, this.l[i], this.l[i]);
             }
-            else{
+            else if(this.fruitType[i] == "blue"){
                 ctx2.drawImage(this.blue, this.x[i] - this.l[i] * 0.5,this.y[i] - this.l[i] * 0.5, this.l[i], this.l[i]);
+            }
+            else if(this.fruitType[i] == "magnet"){
+                ctx2.drawImage(this.magnet, this.x[i] - this.l[i] * 0.5,this.y[i] - this.l[i] * 0.5, this.l[i] * 1.5, this.l[i] * 1.5);
             }
         }
     }
@@ -58,6 +66,10 @@ fruitObj.prototype.born = function (i) {
     this.spd[i] = Math.random() * 0.017 +0.003; //[0.003. 0.02)
     if(Math.random() < 0.15){
         this.fruitType[i] = "blue";
+    }
+    else if(Math.random() < 0.05){
+        //born a bonus fruit
+        this.fruitType[i] = "magnet";
     }
     else this.fruitType[i] = "orange";
 }

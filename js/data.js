@@ -34,6 +34,7 @@ dataObj.prototype.draw = function () {
     ctx1.font = "30px Verdana";
     ctx1.textAlign = "center";  //align: left,center,right
     ctx1.fillText("Score: "+this.score, w*0.5, 50);
+    //score of this time
     if(this.alpha1 && this.alpha1 < Math.PI){
         this.alpha1 += deltaTime * 0.002 * Math.PI;
         //this.alpha1 = Math.sin(this.floatStart);
@@ -51,6 +52,5 @@ dataObj.prototype.draw = function () {
         ctx1.fillText("Game Over", w * 0.5, h * 0.5);
     }
     ctx1.restore();
-
 
 }
