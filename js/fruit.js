@@ -2,6 +2,9 @@
  * Created by Vincent on 2018/5/21.
  */
 var fruitObj = function () {
+    //this.num = 30;
+    this.existFruit;
+
     this.alive = []; //bool
     this.aneNumber = [];
     this.x = [];
@@ -30,6 +33,8 @@ fruitObj.prototype.init = function(){
     this.blue.src = "./src/blue.png";
     this.magnet.src="./src/magnet.png";
     this.box.src = "./src/宝箱.png";
+
+    this.existFruit = 15;
 }
 fruitObj.prototype.draw = function () {
     for(var i = 0; i < this.num;i++){
@@ -91,10 +96,11 @@ fruitObj.prototype.dead = function (i) {
 
 function fruitMonitor() {
     var num = 0;
-    for(var i = 0; i < this.num;i++){
+    for(var i = 0; i < fruit.num;i++){
         if(fruit.alive[i]) num++;
     }
-    if(num < 15){
+    console.log(num);
+    if(num < fruit.existFruit){
         //send fruit
         sendFruit();
     }
