@@ -14,7 +14,6 @@ var fruitObj = function () {
     this.magnet = new Image();
 
     this.typeNum = 6;
-    this.timeCounter = [];  //magnet, freeze, party, diamond
 }
 fruitObj.prototype.num = 30;
 fruitObj.prototype.init = function(){
@@ -78,12 +77,6 @@ fruitObj.prototype.dead = function (i) {
     fruit.alive[i] = false;
 }
 
-// fruitObj.prototype.update = function () {
-//     var num = 0;
-//     for(var i = 0; i < this.num;i++){
-//         if(this.alive[i]) num++;
-//     }
-// }
 
 function fruitMonitor() {
     var num = 0;
@@ -102,4 +95,12 @@ function sendFruit() {
             return;
         }
     }
+}
+
+fruitObj.prototype.fly = function (i) {  //fruit attracted by magnet
+    if(this.fruitType[i] == "orange" || this.fruitType[i] == "blue"){
+        this.x[i] = lerpDistance(mom.x,this.x[i],0.92);
+        this.y[i] = lerpDistance(mom.y,this.y[i],0.92);
+    }
+
 }

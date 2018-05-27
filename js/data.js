@@ -7,9 +7,19 @@ var dataObj = function () {
     this.score = 0;
     this.alpha = 0;
     this.alpha1 = 0;
-    this.floatStart = 0;
+    //this.floatStart = 0;
     this.scoreToAdd = 0;
     this.gameOver = false;
+
+    this.timeCounter = [];  //magnet, freeze, party, diamond
+
+    this.attract_dis = 22500;  //magnet distance
+}
+
+dataObj.prototype.init = function () {
+    for(var i = 0; i < fruit.typeNum; i++){
+        this.timeCounter[i] = 0;
+    }
 }
 
 
@@ -24,6 +34,13 @@ dataObj.prototype.addScore = function () {
 }
 
 dataObj.prototype.draw = function () {
+    //time counter
+    for(var i = 0; i < fruit.typeNum; i++){
+        if(this.timeCounter[i] > 0)
+            this.timeCounter[i] -= deltaTime;
+    }
+
+
     var w = can1.width;
     var h = can1.height;
 

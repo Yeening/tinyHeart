@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d2e5257-6003-4d5c-af5a-d7c3e4c24d18" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/collision.js" afterPath="$PROJECT_DIR$/js/collision.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/commonFunctions.js" afterPath="$PROJECT_DIR$/js/commonFunctions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/data.js" afterPath="$PROJECT_DIR$/js/data.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/fruit.js" afterPath="$PROJECT_DIR$/js/fruit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
     </list>
     <ignored path="tinyHeart.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,18 +33,30 @@
       <file leaf-file-name="tinyHeart.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tinyHeart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+            <state relative-caret-position="312">
+              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="data.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
-              <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+            <state relative-caret-position="351">
+              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#43#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="95" column="25" selection-start-line="95" selection-start-column="25" selection-end-line="95" selection-end-column="25" />
               <folding>
                 <element signature="e#0#43#0" expanded="false" />
               </folding>
@@ -51,52 +67,28 @@
       <file leaf-file-name="fruit.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/fruit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="54" column="95" selection-start-line="54" selection-start-column="95" selection-end-line="54" selection-end-column="95" />
+            <state relative-caret-position="3978">
+              <caret line="102" column="53" selection-start-line="102" selection-start-column="53" selection-end-line="102" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ane.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/ane.js">
+      <file leaf-file-name="bigFish.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/bigFish.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="936">
-              <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+            <state relative-caret-position="1911">
+              <caret line="49" column="44" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="waveRed.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/waveRed.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#43#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wave.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/wave.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-156">
-              <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#43#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="collision.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="collision.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/collision.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+            <state relative-caret-position="351">
+              <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
               <folding>
                 <element signature="n#!!doc;n#momFruitsCollision#0" expanded="false" />
               </folding>
@@ -125,14 +117,15 @@
         <option value="$PROJECT_DIR$/js/baby.js" />
         <option value="$PROJECT_DIR$/js/bigFish.js" />
         <option value="$PROJECT_DIR$/js/ane.js" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/tinyHeart.html" />
         <option value="$PROJECT_DIR$/js/dust.js" />
         <option value="$PROJECT_DIR$/js/wave.js" />
         <option value="$PROJECT_DIR$/js/waveRed.js" />
-        <option value="$PROJECT_DIR$/js/collision.js" />
-        <option value="$PROJECT_DIR$/js/data.js" />
+        <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/js/commonFunctions.js" />
         <option value="$PROJECT_DIR$/js/fruit.js" />
+        <option value="$PROJECT_DIR$/js/data.js" />
+        <option value="$PROJECT_DIR$/js/collision.js" />
       </list>
     </option>
   </component>
@@ -173,11 +166,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane />
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -262,7 +255,8 @@
       <workItem from="1527056809023" duration="8000" />
       <workItem from="1527060319903" duration="5093000" />
       <workItem from="1527166995303" duration="2726000" />
-      <workItem from="1527226980204" duration="3479000" />
+      <workItem from="1527226980204" duration="4395000" />
+      <workItem from="1527402942281" duration="3081000" />
     </task>
     <task id="LOCAL-00001" summary="Make fruits grow and float in random speed">
       <created>1526960188402</created>
@@ -275,7 +269,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56378000" />
+    <option name="totallyTimeSpent" value="60375000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -691,34 +685,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/commonFunctions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/bigFish.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="813">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/baby.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="813">
           <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -742,7 +712,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/wave.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-156">
+        <state relative-caret-position="1131">
           <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
@@ -750,20 +720,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/collision.js">
+    <entry file="file://$PROJECT_DIR$/js/waveRed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+        <state relative-caret-position="1560">
+          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
           <folding>
-            <element signature="n#!!doc;n#momFruitsCollision#0" expanded="false" />
+            <element signature="e#0#43#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/waveRed.js">
+    <entry file="file://$PROJECT_DIR$/js/bigFish.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+        <state relative-caret-position="1911">
+          <caret line="49" column="44" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/commonFunctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="117" column="31" selection-start-line="117" selection-start-column="31" selection-end-line="117" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tinyHeart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="95" column="25" selection-start-line="95" selection-start-column="25" selection-end-line="95" selection-end-column="25" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
           </folding>
@@ -772,26 +776,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/fruit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="54" column="95" selection-start-line="54" selection-start-column="95" selection-end-line="54" selection-end-column="95" />
+        <state relative-caret-position="3978">
+          <caret line="102" column="53" selection-start-line="102" selection-start-column="53" selection-end-line="102" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tinyHeart.html">
+    <entry file="file://$PROJECT_DIR$/js/collision.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+        <state relative-caret-position="351">
+          <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
           <folding>
-            <element signature="e#0#43#0" expanded="false" />
+            <element signature="n#!!doc;n#momFruitsCollision#0" expanded="false" />
           </folding>
         </state>
       </provider>

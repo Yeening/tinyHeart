@@ -112,3 +112,8 @@ function rndi2(m, n) {
 	var a = Math.random() * (n - m) + m;
 	return Math.floor(a);
 }
+
+function accDistance(aim, cur, ratio) {
+	var delta = cur - aim;
+	return aim + delta * ratio;
+}

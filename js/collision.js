@@ -11,12 +11,22 @@ function momFruitsCollision() {
             //get length
             //solved: judge whether the fruit is mature
             var distance = calLength2(fruit.x[i],fruit.y[i], mom.x, mom.y);
+
+            if(distance < data.attract_dis && data.timeCounter[0] > 0){
+                fruit.fly(i);
+            }
+
             if(distance < 900){
                 fruit.dead(i);
                 if(fruit.fruitType[i]=="blue"){
                     data.times = 2;
                 }
-                else data.fruitNum++;
+                else if(fruit.fruitType[i]=="orange"){
+                    data.fruitNum++;
+                }
+                else if(fruit.fruitType[i]=="magnet"){  //exist time of magnet fruit
+                    data.timeCounter[0] = 6000;
+                }
                 wave.born(fruit.x[i],fruit.y[i]);
             }
         }
@@ -38,11 +48,6 @@ function momBabyCollision() {
 
         //big fish recover
         mom.bigBodyCount = 0;
-        if(data.fruitNum){
-
-        }
-
-
 
 
     }

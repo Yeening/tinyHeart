@@ -65,6 +65,7 @@ function init() {
     my = canHeight * 0.5;
 
     data = new dataObj();
+    data.init();
 
     wave = new waveObj();
     wave.init();
