@@ -11,7 +11,7 @@ var dataObj = function () {
     this.scoreToAdd = 0;
     this.gameOver = false;
 
-    this.timeCounter = [];  //magnet, freeze, party, diamond
+    this.timeCounter = [];  //magnet, freeze, party, box
 
     this.attract_dis = 22500;  //magnet distance
 }

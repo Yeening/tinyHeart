@@ -24,6 +24,9 @@ function momFruitsCollision() {
                 else if(fruit.fruitType[i]=="orange"){
                     data.fruitNum++;
                 }
+                else if(fruit.fruitType[i] == "box"){
+                    data.fruitNum += 10;
+                }
                 else if(fruit.fruitType[i]=="magnet"){  //exist time of magnet fruit
                     data.timeCounter[0] = 6000;
                 }
