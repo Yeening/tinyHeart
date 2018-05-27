@@ -14,6 +14,8 @@ var dataObj = function () {
     this.timeCounter = [];  //magnet, freeze, party, box
 
     this.attract_dis = 22500;  //magnet distance
+
+    this.lifes = 1;
 }
 
 dataObj.prototype.init = function () {

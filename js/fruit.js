@@ -119,5 +119,4 @@ fruitObj.prototype.fly = function (i) {  //fruit attracted by magnet
         this.x[i] = lerpDistance(mom.x,this.x[i],0.92);
         this.y[i] = lerpDistance(mom.y,this.y[i],0.92);
     }
-
 }

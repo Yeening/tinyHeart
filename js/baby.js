@@ -91,7 +91,13 @@ babyObj.prototype.draw = function () {
         if(this.babyBodyCount > 19){
             this.babyBodyCount = 19;
             //gameover
-            data.gameOver = true;
+            if(data.lifes){
+                data.lifes--;
+                if(data.lifes == 0)
+                    data.gameOver = true;
+                else
+                    this.babyBodyCount = 0;
+            }
         }
     }
 
