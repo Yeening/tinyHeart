@@ -32,8 +32,17 @@ function lerpAngle(a, b, t) {
 	return a + d * t;
 }
 
+
+
 function lerpDistance(aim, cur, ratio) {
 	var delta = cur - aim;
+	return aim + delta * ratio;
+}
+
+function limitLerpDistance(aim, cur, ratio) {
+	var delta = cur - aim;
+	if(delta > 300 || delta < -300)
+		ratio += 0.01;
 	return aim + delta * ratio;
 }
 
